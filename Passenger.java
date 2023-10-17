@@ -11,5 +11,17 @@ public class Passenger {
         return this.name;
     }
 
-// add board car and get off car methods
+    public void getOnCar(Car c) {
+        try {c.addPassenger(this);
+        this.car = c;} catch(Exception e) {
+            System.out.println("This car is full!");
+        }
+    }
+
+    public void getOffCar(Car c) {
+        try {c.removePassenger(this);
+        this.car = null;} catch (Exception e) {
+            System.out.println(this.name + " is not on this car.");
+        }
+    }
 }

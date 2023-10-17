@@ -4,9 +4,9 @@ public class Engine {
     double currentFuelLevel;
     double maxFuelLevel;
 
-    public Engine(FuelType fuel, double currentFuelLevel, double maxFuelLevel) {
+    public Engine(FuelType fuel, double maxFuelLevel) {
         this.f = fuel;
-        this.currentFuelLevel = currentFuelLevel;
+        this.currentFuelLevel = maxFuelLevel;
         this.maxFuelLevel = maxFuelLevel;
     }
 
@@ -27,6 +27,14 @@ public class Engine {
     }
 
     public void go() {
-        // reduces the amount of fuel by like 10 percent??? idk what this should do 
+        // reduces the amount of fuel by like 10 percent??? idk what this should do
+        double tenpercent = this.maxFuelLevel/10;
+        if (this.currentFuelLevel == 0) {
+            throw new RuntimeException("Fuel level zero. Time to refuel!");
+        }
+        this.currentFuelLevel -= tenpercent;
+        if (this.currentFuelLevel < 0) {
+            this.currentFuelLevel = 0;
+        }
     }
 }
