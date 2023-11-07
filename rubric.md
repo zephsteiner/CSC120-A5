@@ -1,4 +1,5 @@
 # CSC120: Object-Oriented Programming
+
 ## A5 Checklist
 
 Listed below are various aspects of the assignment.  When you turn in your work, please indicate the status of each item
@@ -7,8 +8,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 - **NO** : indicates that the item is not attempted
 - **PART** : indicates that the item is attempted but not fully complete
 
-
-## Assignment Points:
+## Assignment Points
 
 ### Level 1 (4 pts)
 
@@ -36,9 +36,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 **YES** 1 pt: The `Train` class has all expected methods, making use of methods from other classes as appropriate
 
-
-
-## General Items:
+## General Items
 
 **YES** 4 pts: Programs compile without errors or warnings
 
