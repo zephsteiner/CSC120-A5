@@ -11,8 +11,6 @@ public class Train {
     /** List of cars attatched to the engine */
     private ArrayList<Car> cars;
 
-    /** How many passengers fit on the train? */
-    // private int maxCapacity;
     
     /**
      * 
