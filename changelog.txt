@@ -1,0 +1,10 @@
+Engine.java: 
+Made currentFuelLevel and maxFuelLevel private
+Edited go() method to call refuel() when fuel level dips below ten percent, rather than to exactly zero
+
+Passenger.java
+Modified getOnCar(Car c) to be called boardCar(Car c)
+
+Train.java
+Removed attribute maxCapacity, as it was redundant
+Modified getMaxCapacity() to utilize the Car method getCapacity() instead of the deleted attribute
