@@ -31,7 +31,7 @@ public class Passenger {
      * Adds a passenger to a car. This method makes use of the addPassenger method of the Car class
      * @param c What car to board
      */
-    public void getOnCar(Car c) {
+    public void boardCar(Car c) {
         if (this.car != null) {
             try {c.addPassenger(this);
             this.car = c;} catch(Exception e) {

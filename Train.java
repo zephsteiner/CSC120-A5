@@ -12,7 +12,7 @@ public class Train {
     private ArrayList<Car> cars;
 
     /** How many passengers fit on the train? */
-    private int maxCapacity;
+    // private int maxCapacity;
     
     /**
      * 
@@ -24,7 +24,6 @@ public class Train {
     public Train(FuelType fuelType, double fuelCapacity, int nCars, int passengerCapacity) {
         this.engine = new Engine(fuelType, fuelCapacity);
         this.cars = new ArrayList<Car>(nCars);
-        this.maxCapacity = passengerCapacity;
         if (passengerCapacity%nCars != 0) {
             int carCapacity = passengerCapacity/(nCars-1);
             int cabooseCapacity = passengerCapacity%(nCars-1);
@@ -70,7 +69,11 @@ public class Train {
      * @return The maximum capacity of the train
      */
     public int getMaxCapacity() {
-        return this.maxCapacity;
+        int maxCapacity = 0;
+        for (Car c : cars) {
+            maxCapacity += c.getCapacity();
+        }
+        return maxCapacity;
     }
 
     /**
@@ -126,6 +129,6 @@ public class Train {
         t.getCar(0).addPassenger(p2);
         t.getCar(0).addPassenger(p3);
         t.printManifest();
-
+        System.out.println(t.getMaxCapacity());
     }
 }

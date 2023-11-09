@@ -7,10 +7,10 @@ public class Engine {
     private FuelType f;
 
     /** Current level of fuel in the engine */
-    double currentFuelLevel;
+    private double currentFuelLevel;
 
     /** How much fuel can the engine hold? */
-    double maxFuelLevel;
+    private double maxFuelLevel;
 
     /**
      * Creates an engine with specifid type and amount of fuel
@@ -60,8 +60,8 @@ public class Engine {
     public void go() {
         // reduces the amount of fuel by like 10 percent??? idk what this should do
         double tenpercent = this.maxFuelLevel/10;
-        if (this.currentFuelLevel == 0) {
-            throw new RuntimeException("Fuel level zero. Time to refuel!");
+        if (this.currentFuelLevel <= tenpercent) {
+            throw new RuntimeException("Insufficent fuel level. Time to refuel!");
         }
         this.currentFuelLevel -= tenpercent;
         if (this.currentFuelLevel < 0) {
